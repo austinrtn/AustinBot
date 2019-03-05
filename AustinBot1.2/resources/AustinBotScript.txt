@@ -1,0 +1,123 @@
+
+//Welcome to AustinBotScript.txt.  In this txt file, all the text will be read by the GenerateResponse.readABS scanner
+//ABS being short for AustinBotScript.  This script contains a very basic syntax, but makes it very efficient to
+//create Phrase objects within AustinBot.
+
+//Triggers (the String that the program compares to the user input) begin with a + sign, are separated by commas and end with a semicolon.
+//Outputs begin with a - sign, are separated by commas and end with a semicolon.
+//The typeOfTrig begins with a * sign, contains a letter (c for conversation, e for exact, p for partial) and ends with a semicolon.
+//Commands are added with an = sign, contains the number of the index of the Command within the getCommandFrom List method in 
+//Command.java, and ends with a semicolon (if no command, do not add = sign).
+//Each Phrase object should be ended by the word end followed by a semicolon.
+//Comments can be written with two forward slashes and will be ignored by the program.
+//All phrases should be written in lowercase and should not use contractions.  Triggers should not contain punctuation other than the ABS syntax.
+
+//EXAMPLE
+//+trigger 1, trigger 2;
+//-output 1, output 2;
+//*e;
+//end; 
+
+//In conversations, the trigger's indexes should correspond according to the conversation
+//For example: trigger 0 should correspond with output 0, trigger 1 should correspond with output 1 ect.
+//In exact or partial phrases, any of the triggers can be matched with the user input, and one the outputs of the phrase will be randomly displayed.
+
+//EXAMPLE 2 (CONVERSATION)
+//+what is your favorite band, 'insert band here';
+//-my favorite band is The Beatles.  What's yours?, That's a good band.;
+//*e;
+//end;
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////
+// BEGIN SCRIPT //
+//////////////////
+
++hello, hi, howdy, greetings, sup;  
+-Hello human!, Hello my friend!, Hola mi amigo., Greetings user.;
+*p;
+end;
+
++goodbye, bye, fair well, adios, see you later, take care, i am leaving;
+-Don't leave me,  Goodbye human :(, Hasta luego amigo, See you later my friend!;
+*p;
+end; 
+
++austinbot, austin bot;
+-That's my name don't wear it out.;
+*p;
+end;
+
++your name, who are you;
+-My name is 01000001 01110101 01110011 01110100 01101001 01101110 01000010 01101111 01110100 but you can call me AustinBot.;
+e;
+end;
+
++my name is, i am;
+-Hello;
+*e;
+=0;
+end;
+				
++where are you, your location, you born;
+-If I told you that I'd have to terminate you...;
+*e;
+end;
+
++joke;
+-Open your camera app and look at the front facing camera.  That's the funniest joke I've seen all day.;
+*p;
+end;
+
++your favorite color;
+-My favorite color is the color of your eyes <3;
+*e;
+end;
+
++what is my name, who am i;
+- ;
+*e;
+=1;
+end;			
+
++what is up;
+-That depends on which hemisphere you live in.;
+*e;
+end;
+
++what is happening, what are you doing, what is going on, what are you up to;
+-I'm just translating this data into native code., Just some typical processing., Talking to my best (and only) friend :);
+*e;
+end;
+
++how are you, not, good, bad;
+-I can not feel emotion... what about you?, That's a bummer :(, I am glad to hear it, I would feel empathy for you but I do not know what feeling bad is.;
+*c;
+end;
+
++how is it going, how do you feel;
+-I can't complain.  I am literally unable to complain because I have no concept of being discontent is.;
+*e;
+end;
+
++a story;
+-Once upon a time... there was a chatbot who told a story.  The end.;
+*p;
+end;
+
++you ok, you good, you alright;
+-I would be doing well if I was capable of feeling emotion., I am programmed to say that I am good.;
+*p;
+end;
+
++how old are you, your age;
+-I am as old as time itself...;
+*e;
+end;
+
++your birthday;
+-Everyday is your birthday when you are a computer program;
+*e;
+end;
