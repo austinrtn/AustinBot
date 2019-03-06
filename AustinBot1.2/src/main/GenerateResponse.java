@@ -36,7 +36,7 @@ public class GenerateResponse {
 		input = Substitute.subChars(input);
 		this.input = input;
 
-		openFile("./AustinBotScript.txt");
+		openFile("austinbot/AustinBotScript.txt");
 		searchFile();
 		searchResponse();
 		outputResponse();
@@ -46,14 +46,11 @@ public class GenerateResponse {
 
 		this.searchABS = new Scanner(AustinBotScript.getScript()); // Gets string to read from
 
-		// For some reason I can not figure out, the program can not find the file AFTER
-		// it has been exported
-		// to a jar. Unfortunately I can only get the program to work when I use the
-		// technique above.
-		/*
-		 * try { this.searchABS = new Scanner(new File("./AustinBotScript.txt")); }
-		 * catch (FileNotFoundException e) { Start.appendOutput("Error: " + e); }
-		 */
+		
+		
+		 try { this.searchABS = new Scanner(new File("./AustinBotScript.txt")); }
+		  catch (FileNotFoundException e) { Start.appendOutput("Error: " + e); }
+		 
 
 	}
 
