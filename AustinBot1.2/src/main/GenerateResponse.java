@@ -43,15 +43,10 @@ public class GenerateResponse {
 	}
 
 	private void openFile(String fileName) {
-
-		this.searchABS = new Scanner(AustinBotScript.getScript()); // Gets string to read from
-
-		
-		
-		 try { this.searchABS = new Scanner(new File("./AustinBotScript.txt")); }
+		this.searchABS = new Scanner(AustinBotScript.getScript());
+		/* try { this.searchABS = new Scanner(new File("./AustinBotScript.txt")); }
 		  catch (FileNotFoundException e) { Start.appendOutput("Error: " + e); }
-		 
-
+		 */
 	}
 
 	// This method breaks down the text within the text file and separates the
