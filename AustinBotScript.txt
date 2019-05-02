@@ -1,4 +1,3 @@
-
 //Welcome to AustinBotScript.txt.  In this txt file, all the text will be read by the GenerateResponse.readABS scanner
 //ABS being short for AustinBotScript.  This script contains a very basic syntax, but makes it very efficient to
 //create Phrase objects within AustinBot.
@@ -118,5 +117,10 @@ end;
 
 +your birthday;
 -Everyday is your birthday when you are a computer program;
+*e;
+end;
+
++why is the sky blue;
+-Why are you asking me and not Google?;
 *e;
 end;
